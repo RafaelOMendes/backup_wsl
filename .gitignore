@@ -1,0 +1,6 @@
+# Ignore everything at the home dir root by default...
+/*
+
+# ...except my actual code
+!/parallel_programming/
+!/.gitignore

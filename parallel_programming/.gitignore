@@ -1,0 +1,4 @@
+# Compiled binaries (each aula compiles main.c -> main)
+*.o
+*.out
+main
