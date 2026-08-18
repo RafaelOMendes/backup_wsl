@@ -59,3 +59,25 @@ touth
 touch .gitignore
 ls
 nano .gitignore 
+code .
+gcc -o main main.c; ./main
+cd aula_2
+gcc -o main main.c; ./main
+]
+gcc -o main main.c; ./main
+cd ..
+cd aula_3
+gcc -o main main.c; ./main
+gcc -o main exercicio_1.c; ./exercicio_1
+gcc -o main exercicio_1.c;
+gcc -o main exercicio_1.c; ./exercicio_1
+gcc -o exercicio_1 exercicio_1.c; ./exercicio_1
+gcc -o main main.c; ./main
+gcc -o exercicio_1 exercicio_1.c; ./exercicio_1
+gcc -o exercicio_2 exercicio_2.c; ./exercicio_2
+gcc -o exercicio_3 exercicio_3.c; ./exercicio_3
+gcc -o exercicio_4 exercicio_4.c; ./exercicio_4
+gcc -o exercicio_5 exercicio_5.c; ./exercicio_5
+
+gcc -o exercicio_5 exercicio_5.c; ./exercicio_5
+gcc -o exercicio_6 exercicio_6.c; ./exercicio_6
