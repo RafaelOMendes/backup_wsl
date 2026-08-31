@@ -6,9 +6,21 @@
 #define TAMANHO 10
 
 int dados[TAMANHO];
+int soma = 0;
 
-void *processarThread(void *parametro)
+void *processar_thread(void *parametro)
 {
+    int chunk = TAMANHO / 2;
+    int *id_thread = (int *)parametro;
+
+    int posicao_inicio = *id_thread * chunk;
+
+    for (int i = posicao_inicio; i < (1 + *id_thread) * chunk; i++)
+    {
+        dados[i] += 1000;
+        soma += dados[i];
+        printf("Thread: %d, Posicao: %d, Valor: %d\n", *id_thread, i, dados[i]);
+    }
 }
 
 int main()
@@ -16,23 +28,27 @@ int main()
 
     for (int i = 0; i < TAMANHO; i++)
     {
-        dados[i] = i;
+        dados[i] = i + 100;
+        printf("Posicao: %d, Valor: %d\n", i, dados[i]);
     }
 
-    pthread_t id_thread;
-    pthread_t id_thread2;
+    pthread_t id_minha_thread;
+    pthread_t id_segunda_thread;
 
-    int numero = 10;
-    int numero2 = 500;
+    int inicio_thread_1 = 0;
+    int inicio_thread_2 = 1;
 
-    pthread_create(&id_thread, NULL, processarThread, &numero);
-    pthread_create(&id_thread2, NULL, processarThread, &numero2);
+    pthread_create(&id_minha_thread, NULL, processar_thread, &inicio_thread_1);
+    pthread_create(&id_segunda_thread, NULL, processar_thread, &inicio_thread_2);
 
-    printf("Ta rodando fi \n");
+    printf("O código main está executando\n");
 
-    pthread_join(id_thread, NULL);
-    pthread_join(id_thread2, NULL);
+    pthread_join(id_minha_thread, NULL);
+    pthread_join(id_segunda_thread, NULL);
 
-    printf("Todas as thread finalizaram \n");
+    printf("Todas as threads finalizaram!\n");
+
+    printf("Soma: %d \n", soma);
+
     return 0;
 }
