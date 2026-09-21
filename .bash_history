@@ -114,3 +114,32 @@ gcc -o pthreads2 pthreads2.c -lpthread; ./pthreads2
 clear
 gcc -o pthreads2 pthreads2.c -lpthread; ./pthreads2
 gcc -o pthreads3 pthreads3.c -lpthread; ./pthreads3
+cd aula_5
+gcc -o openmp_2 openmp_2.c -fopenmp
+gcc -o openmp_2 openmp_2.c -fopenmp; openmp_2
+gcc -o openmp_2 openmp_2.c -fopenmp; ./openmp_2
+clear
+gcc -o openmp_2 openmp_2.c -fopenmp; ./openmp_2
+clear
+gcc -o openmp_2 openmp_2.c -fopenmp; ./openmp_2
+clear
+gcc -o openmp_2 openmp_2.c -fopenmp; ./openmp_2
+clear
+gcc -o openmp_3 openmp_3.c -fopenmp; ./openmp_3
+clear
+gcc -o openmp_3 openmp_3.c -fopenmp; ./openmp_3
+clear
+gcc -o openmp_3 openmp_3.c -fopenmp; ./openmp_3
+clear
+gcc -o openmp_3 openmp_3.c -fopenmp; ./openmp_3
+clear
+gcc -o openmp_4 openmp_4.c -fopenmp; ./openmp_4
+clear
+gcc -o openmp_4 openmp_4.c -fopenmp; ./openmp_4
+clear
+gcc -o openmp_4 openmp_4.c -fopenmp; ./openmp_4
+clear
+gcc -o openmp_4 openmp_4.c -fopenmp; ./openmp_4
+cd aula_4
+gcc -o usofork usofork.c; ./usofork
+gcc -o usofork uso_fork.c; ./usofork
