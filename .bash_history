@@ -143,3 +143,15 @@ gcc -o openmp_4 openmp_4.c -fopenmp; ./openmp_4
 cd aula_4
 gcc -o usofork usofork.c; ./usofork
 gcc -o usofork uso_fork.c; ./usofork
+claude .
+cd simulacao_fluidos
+clear
+gcc -O2 -Wall -o fluido_sequencial fluido_sequencial.c
+gcc -O2 -Wall -fopenmp -o fluido_paralelo fluido_paralelo.c
+clear
+./fluido_sequencial
+./fluido_paralelo
+./fluido_paralelo 500 4
+./fluido_paralelo 500 100
+./fluido_paralelo 500 12
+./fluido_paralelo 500 24
