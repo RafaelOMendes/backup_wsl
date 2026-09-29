@@ -2,3 +2,9 @@
 *.o
 *.out
 main
+
+# Arquivo de teste gigante gerado por contagem_ocorrencias/gerar_arquivo
+texto_gigante.txt
+
+# Arquivos de áudio grandes (distortion_pedal)
+*.wav

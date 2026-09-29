@@ -155,3 +155,13 @@ clear
 ./fluido_paralelo 500 100
 ./fluido_paralelo 500 12
 ./fluido_paralelo 500 24
+cd simulacao_fluidos
+./fluido_sequencial
+./fluido_paralelo
+./fluido_paralelo 500 4
+ls
+cd ..
+ls
+cd rafa/
+l
+exit
