@@ -165,3 +165,16 @@ ls
 cd rafa/
 l
 exit
+cd ..
+cd distortion_pedal/
+gcc -pthread distortion_pedal.c -o pedal
+./pedal
+gcc -pthread distortion_pedal.c -o pedal
+./pedal
+cd ..
+cd contagem_ocorrencias/
+gcc -O2 -Wall -o contagem_sequencial contagem_sequencial.c
+./contagem_sequencial
+/contagem_sequencial
+./contagem_paralelo 
+./contagem_gpu.exe

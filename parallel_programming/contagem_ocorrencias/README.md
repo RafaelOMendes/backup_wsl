@@ -64,16 +64,19 @@ ocorrências dentro de outras palavras (`paralelo` dentro de `paralelogramo`).
 
 ## Resultados medidos
 
-Arquivo de 2 GB, palavra `paralelo` (12.204.891 ocorrências). Máquina: 12 threads
-e RX 9060 XT 16 GB. Os tempos não incluem a leitura do arquivo.
+Arquivo de 2 GB, palavra `paralelo` (12.204.891 ocorrências). Máquina: Ryzen 5 5600G
+(6 núcleos, 12 threads) e RX 9060 XT 16 GB. Os tempos são a mediana de 3 execuções e
+não incluem a leitura do arquivo.
 
 | Versão | Tempo | Speedup |
 |---|---|---|
-| Sequencial | 2,31 s | 1× |
-| OpenMP, 4 threads | 0,75 s | 3,1× |
-| OpenMP, 12 threads | 0,35 s | 6,6× |
-| GPU (cópia + kernel) | 0,21 s | 11× |
-| GPU, só o kernel | 0,033 s | 70× |
+| Sequencial | 2,45 s | 1× |
+| OpenMP, 4 threads | 0,74 s | 3,3× |
+| OpenMP, 12 threads | 0,38 s | 6,4× |
+| GPU (cópia + kernel) | 0,23 s | 11× |
+| GPU, só o kernel | 0,033 s | 75× |
 
-Na GPU, a maior parte do tempo é a cópia CPU → GPU pelo PCIe (0,18 s). A
-contagem em si é cerca de 10× mais rápida que as 12 threads da CPU.
+Na GPU, a maior parte do tempo é a cópia CPU → GPU pelo PCIe (0,20 s). A
+contagem em si é mais de 10× mais rápida que as 12 threads da CPU.
+
+As decisões de tecnologia estão no [ADR-001-tecnologias.pdf](ADR-001-tecnologias.pdf).

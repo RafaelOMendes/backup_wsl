@@ -8,3 +8,6 @@ texto_gigante.txt
 
 # Arquivos de áudio grandes (distortion_pedal)
 *.wav
+
+# PDFs
+*.pdf
